@@ -1,6 +1,6 @@
 
  
-## Consultas SQL
+## Consultas SQL E NOSQL
 
 1-	Faça uma consulta que retorne a lista de filmes e suas categorias correspondentes.
 ```
