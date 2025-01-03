@@ -16,12 +16,17 @@ JOIN
 ORDER BY 
     f.title, c.name; 
 ```
+<details>
+  <summary>Resultado da Consulta</summary>
+ 
+  ![image](https://github.com/user-attachments/assets/5a0b84f9-32b0-46cf-9f9b-279c5314d33a).
+  
+</details>
 
-![image](https://github.com/user-attachments/assets/5a0b84f9-32b0-46cf-9f9b-279c5314d33a)
 
-```
+
 2-	Faça uma consulta que retorne a lista de todos os atores com o número filmes que cada ator participou. Ordene a lista pelo número de filmes, iniciando pelos atores que mais atuaram.
-
+```
 SELECT 
     CONCAT(a.first_name, ' ', a.last_name) AS Ator,
     COUNT(fa.film_id) AS Numero_De_Filmes
@@ -34,9 +39,14 @@ GROUP BY
 ORDER BY 
     Numero_De_Filmes DESC;
 ```
+<details>
+  <summary>Resultado da Consulta</summary>
+ 
 ![image](https://github.com/user-attachments/assets/340b12b6-55c4-4309-854c-dfee9dfb81ff)
 
-Filmes com mais de 120 minutos de duração
+</details>
+
+Filmes com mais de 120 minutos de duração
 ```
 SELECT 
     title, 
@@ -46,8 +56,12 @@ FROM
 WHERE 
     length > 120;
 ```
-
+<details>
+  <summary>Resultado da Consulta</summary>
+ 
 ![image](https://github.com/user-attachments/assets/85555e47-7706-4666-b143-d2439563a404)
+
+</details>
 
 3-	Faça uma consulta que retorne a lista de atores que atuaram em filmes com mais de duas horas de duração (120min). Ordene a lista pelo número de filmes que cada ator participou.
 ```
@@ -69,8 +83,12 @@ ORDER BY
 
     num_filmes ASC;  
 ```
+<details>
+  <summary>Resultado da Consulta</summary>
+ 
 ![image](https://github.com/user-attachments/assets/e48b8a37-6894-4c49-b57b-e8b3ad156052)
 
+</details>
 1.2 -  A seguir as consultas dos exercícios anteriores que retorne o número de registros encontrados pela busca.
 ```
 SELECT 
@@ -86,7 +104,12 @@ JOIN
 ORDER BY 
     f.title, c.name;
 ```
+<details>
+  <summary>Resultado da Consulta</summary>
+ 
 ![image](https://github.com/user-attachments/assets/4bc21fa9-b9ca-4766-b0b2-1e83a8f57acb)
+
+</details>
 
 2.1- 
 ```
@@ -106,7 +129,11 @@ FROM (
 ) AS Subconsulta;
 
 ```
+<details>
+  <summary>Resultado da Consulta</summary>
+ 
 ![image](https://github.com/user-attachments/assets/37ba6727-8937-4e18-bbde-665afeeaed5b)
+</details>
 
 3.1
 ```
@@ -131,8 +158,13 @@ FROM (
         num_filmes ASC
 ) AS Subconsulta;
 ```
-
+<details>
+  <summary>Resultado da Consulta</summary>
+ 
 ![image](https://github.com/user-attachments/assets/94626db4-4b5b-4887-ab67-70633d6777c0)
+
+ </details>
+ 
 ## Tecnologias Utilizadas
 
 Este repositório foi desenvolvido utilizando as seguintes tecnologias:
