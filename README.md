@@ -173,3 +173,98 @@ Este repositório foi desenvolvido utilizando as seguintes tecnologias:
 - **Extensão MySQL**: Ferramenta utilizada para integração com o banco de dados MySQL diretamente no Visual Studio Code.
 - **Repositório Sakila**: Banco de dados de exemplo utilizado para realizar as consultas SQL, fornecendo uma estrutura de dados para filmes, atores, categorias, etc.
 - **Visual Studio Code**: Editor de código utilizado para escrever, testar e depurar as consultas SQL de forma eficiente.
+  
+## Consultas NOSQL
+
+Faça uma busca de quantos livros não estão com o status publicado e pageCount menor que 300 
+```
+db.biblioteca.countDocuments({
+  status: { $ne: "PUBLISH" },
+  pageCount: { $lt: 300 }
+});
+```
+![image](https://github.com/user-attachments/assets/1f71a1d8-76f9-433c-a82c-eece4c30de1e)
+
+Faça uma busca de livros que contém as palavras MongoDB e SQL Server no título
+```
+db.biblioteca.find({
+  title: { $regex: "MongoDB", $options: "i" },
+  title: { $regex: "SQL Server", $options: "i" }
+}).pretty();
+```
+![image](https://github.com/user-attachments/assets/cde5d9bf-22a9-4305-986b-93de414bb7bf)
+
+
+Faça uma busca com expressão regular onde ISBN começa com 18
+```
+db.biblioteca.find({
+  isbn: { $regex: "^18", $options: "i" }
+}).pretty();
+```
+
+![image](https://github.com/user-attachments/assets/ec1f2350-5761-49ba-a44d-d4a519f18997)
+
+Usando Expressão Regular, busque livros que contém a palavra JAVA ou Mobile na descrição do livro (LongDescription), lembrando que deve trazer todas as palavras independente de começa com maiúsculo ou minúsculo
+
+
+![image](https://github.com/user-attachments/assets/52c9881e-d131-46a7-b253-985afa0db8d5)
+
+
+
+1-	Faça uma busca de quantos livros não estão com o status publicado e pageCount menor que 300 traga apenas o número do resultado usando o contador
+```
+db.biblioteca.countDocuments({
+	$and: [
+	  { status: { $ne: "PUBLISH"} },
+	  { pageCount: { $lt: 300} }
+	
+	]
+});
+![image](https://github.com/user-attachments/assets/d1956847-afc9-4e88-90c8-25ff7c4fb7ba)
+
+
+``` 
+
+2-	Faça uma busca de livros que contém as palavras MongoDB e SQL Server no título e traga apenas o número do resultado usando o contador
+```
+db.biblioteca.countDocuments({
+  title: { $regex: "MongoDB", $options: "i" },
+  title: { $regex: "SQL Server", $options: "i" }
+});
+
+![image](https://github.com/user-attachments/assets/1d816388-f1dc-4a60-a62a-4aec32af26f3)
+
+
+ ```
+3-	Faça uma busca com expressão regular onde ISBN começa com 18 e traga apenas o número do resultado usando o contador
+```
+db.biblioteca.countDocuments({
+  isbn: { $regex: "^18", $options: "i" }
+});
+
+![image](https://github.com/user-attachments/assets/69c52ddf-cff3-4a56-a108-202686bee4d7)
+
+
+
+ ```
+
+Usando Expressão Regular, busque livros que contém a palavra JAVA ou Mobile na descrição do livro (LongDescription), lembrando que deve trazer todas as palavras independente de começa com maiúsculo ou minúsculo e traga apenas o número do resultado usando o contador
+```
+db.biblioteca.countDocuments({
+  longDescription: { $regex: "(java|mobile)", $options: "i" }
+});
+ ```
+
+![image](https://github.com/user-attachments/assets/6d080baa-9d6c-4cd0-8d0e-9b0ac0135d3b)
+
+
+
+
+
+
+
+
+
+
+
+
