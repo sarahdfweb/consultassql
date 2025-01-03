@@ -166,8 +166,7 @@ FROM (
  </details>
  
 ## Tecnologias Utilizadas
-
-Este repositório foi desenvolvido utilizando as seguintes tecnologias:
+Para as consultas SQL  usei as seguintes tecnologias:
 
 - **Docker**: Utilizado para criar e gerenciar containers que facilitam a configuração e execução do ambiente de banco de dados.
 - **Extensão MySQL**: Ferramenta utilizada para integração com o banco de dados MySQL diretamente no Visual Studio Code.
@@ -258,8 +257,10 @@ db.biblioteca.countDocuments({
 ![image](https://github.com/user-attachments/assets/6d080baa-9d6c-4cd0-8d0e-9b0ac0135d3b)
 
 
-
-
+## Tecnologias Utilizadas
+Para as consultas NOSQL  usei as seguintes tecnologias:
+- **MongoDB**
+- **Docker**
 
 
 
