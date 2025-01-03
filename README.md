@@ -1,6 +1,6 @@
 
  
-## Desafio SQL
+## Consultas SQL
 
 1-	Faça uma consulta que retorne a lista de filmes e suas categorias correspondentes.
 ```
@@ -133,4 +133,11 @@ FROM (
 ```
 
 ![image](https://github.com/user-attachments/assets/94626db4-4b5b-4887-ab67-70633d6777c0)
+## Tecnologias Utilizadas
 
+Este repositório foi desenvolvido utilizando as seguintes tecnologias:
+
+- **Docker**: Utilizado para criar e gerenciar containers que facilitam a configuração e execução do ambiente de banco de dados.
+- **Extensão MySQL**: Ferramenta utilizada para integração com o banco de dados MySQL diretamente no Visual Studio Code.
+- **Repositório Sakila**: Banco de dados de exemplo utilizado para realizar as consultas SQL, fornecendo uma estrutura de dados para filmes, atores, categorias, etc.
+- **Visual Studio Code**: Editor de código utilizado para escrever, testar e depurar as consultas SQL de forma eficiente.
